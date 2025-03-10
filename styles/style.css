@@ -1,0 +1,424 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0 solid transparent;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  min-height: 100vh;
+  line-height: 1.2;
+  text-rendering: optimizeSpeed;
+}
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+button, [role=button] {
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+button:focus, [role=button]:focus {
+  outline: 0;
+}
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+ol, ul {
+  list-style: none;
+}
+[type=date],
+[type=datetime],
+[type=datetime-local],
+[type=email],
+[type=month],
+[type=number],
+[type=password],
+[type=search],
+[type=tel],
+[type=text],
+[type=time],
+[type=url],
+[type=week],
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+}
+[type=date]:focus,
+[type=datetime]:focus,
+[type=datetime-local]:focus,
+[type=email]:focus,
+[type=month]:focus,
+[type=number]:focus,
+[type=password]:focus,
+[type=search]:focus,
+[type=tel]:focus,
+[type=text]:focus,
+[type=time]:focus,
+[type=url]:focus,
+[type=week]:focus,
+textarea:focus,
+select:focus {
+  outline: 0;
+}
+::-moz-placeholder {
+  opacity: 1;
+}
+textarea {
+  vertical-align: top;
+  overflow: auto;
+}
+[type=checkbox],
+[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+[type=checkbox]:focus,
+[type=radio]:focus {
+  outline: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  padding: 0px 30px;
+  position: absolute;
+  color: #3bc542;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  font-size: 18px;
+}
+li ul {
+  padding: 0px 20px;
+  transition: text-shadow 0.1s ease-in-out;
+}
+li ul:hover {
+  color: #beecc0;
+  text-shadow: 0 0 10px #fff, 0 0 20px #3bc542, 0 0 30px #3bc542, 0 0 40px #3bc542, 0 0 50px #3bc542;
+}
+
+@font-face {
+  font-family: Font;
+  src: url("../sources/Sixtyfour/static/Sixtyfour-Regular.ttf");
+}
+@font-face {
+  font-family: parag;
+  src: url("../sources/VT323/VT323-Regular.ttf");
+}
+@font-face {
+  font-family: parag2;
+  src: url("../sources/Turret_Road/TurretRoad-Regular.ttf");
+}
+
+
+
+html {
+  font-family: Font;
+  background-color: black;
+  color: white;
+}
+h1{
+  margin:20px;
+}
+.glowing-text {
+  font-size: 60px;
+  color: #fff;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+.glowing-text2 {
+  font-size: 40px;
+  color: #fff;
+  animation: glow2 2s ease-in-out infinite alternate;
+}
+
+/* Glow animation */
+@keyframes glow {
+  0% {
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff;
+  }
+  100% {
+    color: #ff00ff;
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff;
+  }
+}
+@keyframes glow2 {
+  0% {
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #3bc542, 0 0 30px #3bc542, 0 0 40px #3bc542, 0 0 50px #3bc542;
+  }
+  100% {
+    color: #3bc542;
+    text-shadow: 0 0 20px #fff, 0 0 30px #3bc542, 0 0 40px #3bc542, 0 0 50px #3bc542, 0 0 60px #3bc542;
+  }
+}
+.heading{
+  height: 100vh;
+  background-image: url("../sources/download 1.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0px 0px 200px 150px black;
+  padding: 3%;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+}
+.blog{
+  background-image: url("../sources/hacker.gif");
+}
+.post-contain{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  justify-items: center;
+  gap: 7%;
+  padding:5%;
+  font-family: parag2;
+}
+.post-contain a{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  height: 500px;
+  width: 100%;
+  border:solid 2px white;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.post-contain >a>span>img{
+  width:100%;
+  height:300px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+.post-contain >a>span>h2{
+  font-size: 22px;
+}
+.about-me{
+  height:auto;
+  display: flex;
+  gap:50px;
+}
+.about-me > div:nth-child(1){
+  height: 700px;
+  width: 700px;
+  background-image:url("../sources/Neon JAPAN aestehetic 1.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0px 0px 100px 70px black;
+  flex-shrink: 0;
+}
+.about-me > div:nth-child(2){
+  font-family: parag2;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 50px;
+  width: 50%;
+  font-size: 22px;
+}
+.about-me2{
+  height:auto;
+  display: flex;
+  gap:50px;
+  
+}
+.about-me2 > div:nth-child(2){
+  height: 700px;
+  width: 700px;
+  background-image:url("../sources/200w.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0px 0px 100px 70px black;
+  flex-shrink: 0;
+}
+.about-me2 > div:nth-child(1){
+  font-family: parag2;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 50px;
+  width: 50%;
+  font-size: 22px;
+}
+section{
+  justify-content: center;
+}
+.socials{
+  display: grid;
+  gap: 50px;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.socials a{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap:5px;
+  padding: 10px;
+  min-width: 50%;
+  height: 200px;
+  border:solid 1px white;
+  border-radius: 8px;
+}
+
+
+@media screen and (max-width:1292px){
+  .about-me, .about-me2{
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about-me > div:nth-child(1), .about-me2>div:nth-child(2){
+    width: 100vw;
+  }
+  .about-me > div:nth-child(2), .about-me2>div:nth-child(1){
+    width: 100vw;
+    font-size: 40px;
+  }
+}
+@media screen and (max-width:850px){
+  .socials{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  p{
+    font-size: 22px;
+  }
+}
+@media screen and (max-width:520px) {
+  .socials{
+    display: flex;
+    flex-direction: column;
+  }
+  .socials a{
+    width:75%;
+  }
+}
+
+@media screen and (max-width:1030px){
+  .post-contain{
+    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+  }
+}
+@media screen and (max-width:755px){
+  footer {
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer div{
+    max-width: 100%!important;
+  }
+  .post-contain{
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    padding-bottom: 80px;
+  }
+}
+.post-heading{
+  font-family: parag2;
+  font-size: 50px;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+.content{
+  padding: 2% 10%;
+  font-size: 25px;
+  font-family: parag2;
+  white-space: pre-wrap;
+}
+footer{
+  min-height:500px;
+  background-image: url("../sources/city.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0px 0px 100px 70px black;
+  display: flex;
+  justify-content: space-between;
+  padding:5%;
+}
+footer div{
+  min-width: 31%;
+  max-width: 450px;
+  max-height: 400px;
+  background-color: black;
+  opacity: 0.9;
+  padding: 1.5%;
+  display: flex;
+  flex-direction: column;
+  gap:13px;
+}
+.separate{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.separate > div:nth-child(2){
+  display: flex;
+  flex-direction: row;
+}
