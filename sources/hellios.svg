@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+
+ <g class="layer">
+  <title>Layer 1</title>
+  <circle cx="400" cy="400" fill="#000000" id="svg_1" r="375" stroke="#000000" stroke-width="5"/>
+  <circle cx="400" cy="284" fill="#ffffff" id="svg_2" r="264" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0"/>
+  <circle cx="400" cy="155" fill="#000000" id="svg_3" r="127" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-opacity="null" stroke-width="0" transform="matrix(1, 0, 0, 1, 0, 0)"/>
+  <polygon cx="-214.83" cy="356.33" edge="86.42" fill="#000000" id="svg_6" orient="x" points="471.6800537109375,497.33331298828125 420.883544921875,567.2486572265625 338.6930847167969,540.5433959960938 338.6930847167969,454.12322998046875 420.883544921875,427.4179382324219 471.6800537109375,497.33331298828125" shape="regularPoly" sides="5" stroke="#000000" stroke-width="5" transform="matrix(1, 0, 0, 1, 0, 0) rotate(-17.2931, 405.187, 497.333)"/>
+ </g>
+</svg>
