@@ -89,10 +89,12 @@
 <footer>
   <div class="separate">
     <div>
-        <a href="index.html">>>> Home</a>
-        <a href="Blog.html">>>> Blog</a>
-        <a href="About.html">>>> Shop</a>
-        <a href="Sources.html">>>> Sources</a>
+        <a href="/">>>> Home</a>
+        <a href="/blog">>>> Blog</a>
+        <a href="/about">>>> About</a>
+        <a href="/sources">>>> Sources</a>
+        <a href="/shop">>>> Shop</a>
+        <a href="/legal">>>> Legal</a>
     </div>
     <div>
         <a href="https://github.com/Helios360" aria-label="social-link">

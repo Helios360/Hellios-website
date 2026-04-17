@@ -29,7 +29,6 @@ db.createCollection("users", {
   }
 });
 
-
 db.createCollection("posts", {
   validator: {
     $jsonSchema: {
@@ -57,6 +56,67 @@ db.createCollection("posts", {
       }
     }
   }
+});
+
+db.createCollection("articles", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      required: ["slug", "title", "date", "description", "price", "caption", "tags"],
+      properties: {
+        id: {
+          bsonType: "int",
+          description: "optional numeric article id"
+        },
+        slug: {
+          bsonType: "string",
+          description: "unique article slug"
+        },
+        title: {
+          bsonType: "string",
+          description: "article title"
+        },
+        date: {
+          bsonType: "date",
+          description: "publication date"
+        },
+        description: {
+          bsonType: "string",
+          description: "short article description"
+        },
+        price: {
+          bsonType: ["double", "int", "long", "decimal"],
+          description: "article price"
+        },
+        caption: {
+          bsonType: "string",
+          description: "image path or caption"
+        },
+        tags: {
+          bsonType: "array",
+          description: "list of article tags",
+          items: {
+            bsonType: "string"
+          }
+        }
+      }
+    }
+  }
+});
+
+
+
+
+
+db.articles.insertOne({
+  id: 1,
+  slug: "iphone-15-pro-review",
+  title: "iPhone 15 Pro Review",
+  date: new Date(),
+  description: "A quick look at Apple's latest flagship.",
+  price: 999,
+  caption: "/ArticleImages/iphone15pro.jpg",
+  tags: ["apple", "iphone", "review"]
 });
 
 db.users.insertOne({

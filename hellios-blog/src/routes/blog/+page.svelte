@@ -12,7 +12,7 @@
     {#each data.posts as post}
     <a href="/blog/{post.slug}"> 
         <span>
-            <img src="{post.caption}" alt="windows 10">
+            <img src="{post.caption}" alt="{post.slug}">
             <h2 class="glowing-text2">{post.title}</h2>
         </span>
         <p>{post.excerpt}</p>

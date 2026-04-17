@@ -82,6 +82,7 @@ ol, ul { list-style: none; }
 html { font-family: Font, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background-color: var(--bg); color: var(--text); }
 h1{ margin:20px; }
 .glow-green {
+  cursor: default;
   transition: text-shadow 0.1s ease-in-out;
 }
 .glow-green:hover {
@@ -112,7 +113,7 @@ h1{ margin:20px; }
   justify-content: space-between;
   padding: 20px;
   height: 500px;
-  width: 33%;
+  width: 30%;
   border:solid 2px var(--text);
   border-radius: 4px;
   overflow: hidden;
@@ -220,6 +221,16 @@ h2{font-family: parag2; font-size: 2rem;}
 }
 .main > section{
   max-width: 1800px;
+}
+
+.common-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap:1rem;
+  border:solid 2px var(--primary);
+  border-radius: 5px;
+  padding:2rem; 
 }
 @media screen and (max-width:1292px){
   .about-me, .about-me2{
