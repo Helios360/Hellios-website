@@ -1,13 +1,20 @@
 <script lang="ts">
+	import Hero from "$lib/components/Hero.svelte";
+
     let { data } = $props();
 </script>
 <svelte:head>
     <title>{data.post.title}</title>
     <meta name="descrition" content={data.post.excerpt}/>
 </svelte:head>
+<Hero
+    title={data.post.title}
+    subtitle={data.post.date}
+    background={data.post.caption}
+    />
 <section class="content">
-<img src={data.post.caption} alt="windows10">
-<h1>{data.post.title}</h1>
-<h3>{data.post.date}</h3>
-<p>{data.post.content}</p>
+    <p>{data.post.content}</p>
 </section>
+<style>
+    
+</style>

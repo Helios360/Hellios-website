@@ -6,7 +6,7 @@ export type User = {
     password: string,
     role: 0 | 1,
     register_time: Date,
-    upadate_time?: Date,
+    update_time?: Date,
 }
 
 export async function getUserByEmail(email: string): Promise<WithId<User> | null> {

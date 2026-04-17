@@ -7,7 +7,8 @@ let db: Promise<any>;
 
 export function getDb(): Promise<Db>{
     if (!db) {
-        db = client.connect().then(c => c.db('Hellios-Blog'));
+        db = client.connect().then(client => client.db('Hellios-Blog'));
     }
     return db;
 }
+export { client };

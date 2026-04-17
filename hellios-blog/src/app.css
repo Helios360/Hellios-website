@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6 { font: inherit; font-weight: inherit; }
 ol, ul { list-style: none; }
 /* Keep focus for accessibility */
 :focus-visible {
-  outline: 2px solid #3bc542;
+  outline: 2px solid var(--secondary);
   outline-offset: 3px;
 }
 /* Reduced motion */
@@ -28,19 +28,19 @@ ol, ul { list-style: none; }
 /* reset done */
 @font-face {
   font-family: "Font";
-  src: url("/Sixtyfour/static/Sixtyfour-Regular.woff2") format("woff2"),
+  src: url("/Sixtyfour/static/Sixtyfour-Regular.ttf") format("ttf"),
        url("/Sixtyfour/static/Sixtyfour-Regular.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
   font-family: "parag";
-  src: url("/VT323/VT323-Regular.woff2") format("woff2"),
+  src: url("/VT323/VT323-Regular.ttf") format("ttf"),
        url("/VT323/VT323-Regular.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
   font-family: "parag2";
-  src: url("/Turret_Road/TurretRoad-Regular.woff2") format("woff2"),
+  src: url("/Turret_Road/TurretRoad-Regular.ttf") format("ttf"),
        url("/Turret_Road/TurretRoad-Regular.ttf") format("truetype");
   font-display: swap;
 }
@@ -58,71 +58,53 @@ ol, ul { list-style: none; }
 }
 @keyframes glow2 {
   0% {
-    color: #fff;
-    text-shadow: 0 0 10px #fff, 0 0 20px #3bc542, 0 0 30px #3bc542, 0 0 40px #3bc542, 0 0 50px #3bc542;
+    color: var(--text);
+    text-shadow: 0 0 10px var(--text), 0 0 20px var(--secondary), 0 0 30px var(--secondary), 0 0 40px var(--secondary), 0 0 50px var(--secondary);
   }
   100% {
-    color: #3bc542;
-    text-shadow: 0 0 20px #fff, 0 0 30px #3bc542, 0 0 40px #3bc542, 0 0 50px #3bc542, 0 0 60px #3bc542;
+    color: var(--secondary);
+    text-shadow: 0 0 20px var(--text), 0 0 30px var(--secondary), 0 0 40px var(--secondary), 0 0 50px var(--secondary), 0 0 60px var(--secondary);
   }
 }
 /* vars */
 :root{
   color-scheme: dark;
-  --primary: #ffffff;
+  --primary: #fff;
   --secondary: #3bc542;
   --tertiary: #ff00ff;
-  --bg: #000000;
+  --bg: black;
   --text: #fff;
   --radius: 8px;
   --shadow-inset-heavy: inset 0 0 100px 70px #000;
   --space: clamp(0.75rem, 1vw + 0.25rem, 1.25rem);
-  transition: color 0.2s ease, background-color 0.2s ease; /* avoid 'all' */
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 html { font-family: Font, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background-color: var(--bg); color: var(--text); }
-h1{
-  margin:20px;
-}
+h1{ margin:20px; }
 .glow-green {
-  padding: 0px 20px;
   transition: text-shadow 0.1s ease-in-out;
 }
 .glow-green:hover {
   color: #beecc0;
-  text-shadow: 0 0 10px #fff, 0 0 20px #3bc542, 0 0 30px #3bc542, 0 0 40px #3bc542, 0 0 50px #3bc542;
+  text-shadow: 0 0 10px var(--text), 0 0 20px var(--secondary), 0 0 30px var(--secondary), 0 0 40px var(--secondary), 0 0 50px var(--secondary);
 }
 .glowing-text {
   font-size: 3rem;
-  color: #fff;
+  color: var(--text);
   animation: glow 2s ease-in-out infinite alternate;
 }
 .glowing-text2 {
   font-size: 2.3rem;
-  color: #fff;
+  color: var(--text);
   animation: glow2 2s ease-in-out infinite alternate;
 }
-.heading{
-  height: 100vh;
-  width: 100%;
-  background-image: url("/download 1.gif");
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: inset 0px 0px 200px 150px black;
-  padding: 3%;
-  display: flex;
-  justify-content: start;
-  align-items: end;
-}
-.blog{
-  background-image: url("/hacker.gif");
-}
 .post-contain{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
-  justify-items: center;
-  gap: 7%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  gap: 1rem;
   font-family: parag2;
-  padding:0rem 3rem;
 }
 .post-contain a{
   display: flex;
@@ -130,8 +112,8 @@ h1{
   justify-content: space-between;
   padding: 20px;
   height: 500px;
-  width: 100%;
-  border:solid 2px white;
+  width: 33%;
+  border:solid 2px var(--text);
   border-radius: 4px;
   overflow: hidden;
 }
@@ -174,7 +156,7 @@ h2{font-family: parag2; font-size: 2rem;}
   background-image:url("/giphy.gif");
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: inset 0px 0px 100px 80px black;
+  box-shadow: inset 0px 0px 100px 80px var(--bg);
   flex-shrink: 0;
 }
 .about-me2 > div:nth-child(1){
@@ -210,27 +192,7 @@ h2{font-family: parag2; font-size: 2rem;}
   border:solid 1px white;
   border-radius: 8px;
 }
-footer{
-  min-height:500px;
-  background-image: url("/city.gif");
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: inset 0px 0px 100px 70px black;
-  display: flex;
-  justify-content: space-between;
-  padding:3rem;
-}
-footer div{
-  min-width: 31%;
-  max-width: 450px;
-  max-height: 400px;
-  background-color: black;
-  opacity: 0.9;
-  padding: 1.5%;
-  display: flex;
-  flex-direction: column;
-  gap:13px;
-}
+
 .post-heading{
   font-family: parag2;
   font-size: 50px;

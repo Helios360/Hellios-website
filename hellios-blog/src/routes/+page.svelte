@@ -1,13 +1,12 @@
 <script lang="ts">
-    import type { PageProps } from "./$types";
-    let { data }: PageProps = $props();
+    import Hero from "$lib/components/Hero.svelte";
+    let { data } = $props();
 </script>
-<section class="heading">
-    <div>
-        <h1 class="glowing-text">HELLIOS</h1>
-        <h2>Follow me on my journey to freedom with CS :D !</h2>
-    </div>
-</section>
+<Hero 
+    title="Home" 
+    subtitle="Welcome to my world, fighting for liberty..." 
+    background="/city.gif"
+    />
 <div class="main">
 <section class="about-me">
     <div></div>
@@ -46,11 +45,11 @@
     {#each data.posts as post}
     <a href="/blog/{post.slug}"> 
         <span>
-            <img src="{post.caption}" alt="windows 10">
+            <img src="{post.caption}" alt="{post.slug}">
             <h2 class="glowing-text2">{post.title}</h2>
         </span>
-        <p>{post.excerpt}</p>
-        <p>{post.date}</p>
+        <p>{post.excerpt.length > 60 ? post.excerpt.slice(0,60) + '...' : post.excerpt}</p>
+        <p><u>{post.date}</u></p>
     </a>
     {/each}
 </section>

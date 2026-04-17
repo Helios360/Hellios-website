@@ -26,7 +26,9 @@
 		"vite": "^8.0.7"
 	},
 	"dependencies": {
+		"@better-auth/mongo-adapter": "^1.6.5",
 		"bcrypt": "^6.0.0",
+		"better-auth": "^1.6.5",
 		"mongodb": "^7.1.1"
 	}
 }

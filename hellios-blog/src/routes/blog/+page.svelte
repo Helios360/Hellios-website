@@ -1,16 +1,14 @@
 <script lang="ts">
+	import Hero from "$lib/components/Hero.svelte";
     import type { PageProps } from "./$types";
     let { data }: PageProps = $props();
 </script>
-<section class="heading blog">
-    <div>
-        <h1 class="glowing-text">BLOG</h1>
-        <h2>All my posts and projects here !</h2>
-        <br>
-    </div>
-</section>
+<Hero
+    title="Blog" 
+    subtitle="Some of the knowledge and tricks I got" 
+    background="/hacker.gif"
+    />
 <section class="post-contain">
-    
     {#each data.posts as post}
     <a href="/blog/{post.slug}"> 
         <span>
@@ -22,6 +20,3 @@
     </a>
     {/each}
 </section>
-<style>
-    
-</style>
